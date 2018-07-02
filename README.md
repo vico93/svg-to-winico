@@ -4,6 +4,7 @@ I created this couple of batches after became infuriated by a deviantart guy try
 You will need:
   * Inkscape (optionally on PATH; you can add it only for the .BATs - change the inkscape path on both BATs!);
   * Imagemagick (should be on your PATH);
+  * [Twemoji](https://github.com/twitter/twemoji) repository cloned on your computer.
 
 And yeah its poorly written but its my first public project anyway.
 

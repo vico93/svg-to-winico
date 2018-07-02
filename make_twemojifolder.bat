@@ -1,4 +1,4 @@
-REM @echo off
+@echo off
 SETLOCAL EnableDelayedExpansion
 cd /D %~dp0
 

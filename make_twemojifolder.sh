@@ -49,7 +49,7 @@ for f in $emoji_dir/*.*; do
 	convert compositeicon_256.png compositeicon_64.png compositeicon_48.png compositeicon_40.png compositeicon_32.png compositeicon_24.png compositeicon_20.png compositeicon_16.png $final_dir/$(basename ${f%%.*}).ico
 
 	# Clear screen
-	# clear
+	clear
 done
 
 cd $script_dir

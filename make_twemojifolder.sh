@@ -23,14 +23,14 @@ do
 	cd $temp_dir/${f%.*}
 	
 	# Processa svg do emoji
-	inkscape $emoji_dir/$f --export-png="emoji_256.png" -w120 -h120 --without-gui
-	inkscape $emoji_dir/$f --export-png="emoji_64.png" -w32 -h32 --without-gui
-	inkscape $emoji_dir/$f --export-png="emoji_48.png" -w24 -h24 --without-gui
-	inkscape $emoji_dir/$f --export-png="emoji_40.png" -w20 -h20 --without-gui
-	inkscape $emoji_dir/$f --export-png="emoji_32.png" -w16 -h16 --without-gui
-	inkscape $emoji_dir/$f --export-png="emoji_24.png" -w12 -h12 --without-gui
-	inkscape $emoji_dir/$f --export-png="emoji_20.png" -w10 -h10 --without-gui
-	inkscape $emoji_dir/$f --export-png="emoji_16.png" -w16 -h16 --without-gui
+	convert -resize 120x120 -background none $emoji_dir/$f emoji_256.png
+	convert -resize 32x32 -background none  $emoji_dir/$f emoji_64.png
+	convert -resize 24x24 -background none  $emoji_dir/$f emoji_48.png
+	convert -resize 20x20 -background none  $emoji_dir/$f emoji_40.png
+	convert -resize 16x16 -background none  $emoji_dir/$f emoji_32.png
+	convert -resize 12x12 -background none  $emoji_dir/$f emoji_24.png 
+	convert -resize 10x10 -background none  $emoji_dir/$f emoji_20.png
+	convert -resize 16x16 -background none  $emoji_dir/$f emoji_16.png
 	
 	# Composite the folder icon
 	convert $baseicons_dir/256.png emoji_256.png -gravity SouthEast -geometry +16+29 -composite "compositeicon_256.png"

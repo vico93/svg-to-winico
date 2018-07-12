@@ -15,8 +15,7 @@ set final_dir=$script_dir/bin/library
 
 mkdir $final_dir
 
-for f in $emoji_dir
-do
+for f in $emoji_dir/*.*; do
 	echo "Processing $f file..."
 	# Pasta temporária
 	mkdir $temp_dir/${f%.*}

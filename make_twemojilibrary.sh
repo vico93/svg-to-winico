@@ -1,16 +1,17 @@
 #!/bin/bash
-cd "${0%/*}"
+script_dir="${0%/*}"
+cd $script_dir
 
 # Start this bash with the twemoji svg folder as a argument
 # e.g.:make_twemojilibrary.sh <path to your Twemoji folder>\2\svg
 emoji_dir=$1
 
 # Folder where you extracted the standard Windows library icon
-baseicons_dir=${0%/*}/src/library
+baseicons_dir=$script_dir/src/library
 # Temp dir
-set temp_dir=${0%/*}/tmp
+set temp_dir=$script_dir/tmp
 # The dir where the finished icons are stored
-set final_dir=${0%/*}/bin/library
+set final_dir=$script_dir/bin/library
 
 mkdir /p $final_dir
 
@@ -48,7 +49,7 @@ do
 	clear
 done
 
-cd "${0%/*}"
+cd $script_dir
 rm -rf $temp_dir
 
 read -n1 -r -p "Press any key to continue..." key

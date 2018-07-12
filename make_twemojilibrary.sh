@@ -48,7 +48,7 @@ do
 	clear
 done
 
-cd ${0%/*}
+cd "${0%/*}"
 rm -rf $temp_dir
 
 read -n1 -r -p "Press any key to continue..." key

@@ -1,5 +1,5 @@
 #!/bin/bash
-script_dir="${0%/*}"
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $script_dir
 
 # Start this bash with the twemoji svg folder as a argument

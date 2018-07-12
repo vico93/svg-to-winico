@@ -19,8 +19,8 @@ for f in $emoji_dir
 do
 	echo "Processing $f file..."
 	# Pasta temporária
-	mkdir /p $temp_dir$/${f%%.*}
-	cd $temp_dir$/${f%%.*}
+	mkdir /p $temp_dir/${f%%.*}
+	cd $temp_dir/${f%%.*}
 	
 	# Processa svg do emoji
 	inkscape $emoji_dir/$f --export-png="emoji_256.png" -w120 -h120 --without-gui

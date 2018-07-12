@@ -10,10 +10,10 @@ emoji_dir=$1
 # Folder where you extracted the standard Windows folder icon
 baseicons_dir="$script_dir/src/folder"
 # Temp dir
-set temp_dir="$script_dir/tmp"
+temp_dir="$script_dir/tmp"
 echo "Temp is $temp_dir"
 # The dir where the finished icons are stored
-set final_dir="$script_dir/bin/folder"
+final_dir="$script_dir/bin/folder"
 echo "Final is $final_dir"
 
 mkdir $final_dir

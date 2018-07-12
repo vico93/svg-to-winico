@@ -9,9 +9,9 @@ emoji_dir=$1
 # Folder where you extracted the standard Windows library icon
 baseicons_dir=$script_dir/src/library
 # Temp dir
-set temp_dir=$script_dir/tmp
+temp_dir=$script_dir/tmp
 # The dir where the finished icons are stored
-set final_dir=$script_dir/bin/library
+final_dir=$script_dir/bin/library
 
 mkdir $final_dir
 

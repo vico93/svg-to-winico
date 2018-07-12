@@ -22,6 +22,7 @@ for f in $emoji_dir/*.*; do
 	echo "Processing $f file..."
 	# Pasta temporária
 	mkdir $temp_dir/$(basename ${f%%.*})
+	echo $temp_dir/$(basename ${f%%.*})
 	cd $temp_dir/$(basename ${f%%.*})
 	
 	# Processa svg do emoji

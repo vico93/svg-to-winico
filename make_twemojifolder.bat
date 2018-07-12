@@ -5,7 +5,7 @@ cd /D %~dp0
 REM Set PATH only if you arent added inkscape already
 SET PATH=%PATH%;C:\Program Files\Inkscape\
 
-REM Folder whëre emojis are stored (git repository)
+REM Folder where emojis are stored (git repository)
 REM e.g.:<path to your Twemoji folder>\2\svg
 set /p emoji_dir=Enter emoji dir path: 
 

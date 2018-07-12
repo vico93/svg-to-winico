@@ -9,7 +9,7 @@ REM Folder whëre emojis are stored (git repository)
 REM e.g.:<path to your Twemoji folder>\2\svg
 set /p emoji_dir=Enter emoji dir path: 
 
-REM Folder where you extracted the standard Windows folder icon
+REM Folder where you extracted the standard Windows library icon
 set baseicons_dir=%~dp0\src\library
 REM Temp dir
 set temp_dir=%~dp0\tmp

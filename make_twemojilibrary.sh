@@ -18,8 +18,8 @@ mkdir $final_dir
 for f in $emoji_dir/*.*; do
 	echo "Processing $f file..."
 	# Pasta temporária
-	mkdir $temp_dir/${f%.*}
-	cd $temp_dir/${f%.*}
+	mkdir $temp_dir/$(basename $f)
+	cd $temp_dir/$(basename $f)
 	
 	# Processa svg do emoji
 	convert -resize 120x120 -background none $emoji_dir/$f emoji_256.png
@@ -42,7 +42,7 @@ for f in $emoji_dir/*.*; do
 	convert $baseicons_dir/16.png emoji_16.png -gravity center -geometry +0-1 -composite "compositeicon_16.png"
 	
 	# Make the .ico	
-	convert compositeicon_256.png compositeicon_64.png compositeicon_48.png compositeicon_40.png compositeicon_32.png compositeicon_24.png compositeicon_20.png compositeicon_16.png $final_dir/${f%.*}.ico
+	convert compositeicon_256.png compositeicon_64.png compositeicon_48.png compositeicon_40.png compositeicon_32.png compositeicon_24.png compositeicon_20.png compositeicon_16.png $final_dir/$(basename $f).ico
 
 	# Clear screen
 	# clear

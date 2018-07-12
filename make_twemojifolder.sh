@@ -1,6 +1,7 @@
 #!/bin/bash
-script_dir="${0%/*}"
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $script_dir
+echo "Base is $script_dir"
 
 # Start this bash with the twemoji svg folder as a argument
 # e.g.:make_twemojilibrary.sh <path to your Twemoji folder>\2\svg
@@ -10,8 +11,10 @@ emoji_dir=$1
 baseicons_dir=$script_dir/src/folder
 # Temp dir
 set temp_dir=$script_dir/tmp
+echo "Temp is $temp_dir"
 # The dir where the finished icons are stored
 set final_dir=$script_dir/bin/folder
+echo "Final is $final_dir"
 
 mkdir $final_dir
 

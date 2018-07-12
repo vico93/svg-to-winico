@@ -13,13 +13,13 @@ set temp_dir=$script_dir/tmp
 # The dir where the finished icons are stored
 set final_dir=$script_dir/bin/folder
 
-mkdir /p $final_dir
+mkdir -p $final_dir
 
 for f in $emoji_dir
 do
 	echo "Processing $f file..."
 	# Pasta temporária
-	mkdir /p $temp_dir/${f%.*}
+	mkdir -p $temp_dir/${f%.*}
 	cd $temp_dir/${f%.*}
 	
 	# Processa svg do emoji

@@ -19,8 +19,8 @@ for f in $emoji_dir
 do
 	echo "Processing $f file..."
 	# Pasta temporária
-	mkdir /p $temp_dir/${f%%.*}
-	cd $temp_dir/${f%%.*}
+	mkdir /p $temp_dir/${f%.*}
+	cd $temp_dir/${f%.*}
 	
 	# Processa svg do emoji
 	inkscape $emoji_dir/$f --export-png="emoji_256.png" -w120 -h120 --without-gui
@@ -43,7 +43,7 @@ do
 	magick $baseicons_dir/16.png emoji_16.png -gravity center -geometry +0-1 -composite "compositeicon_16.png"
 	
 	# Make the .ico	
-	magick compositeicon_256.png compositeicon_64.png compositeicon_48.png compositeicon_40.png compositeicon_32.png compositeicon_24.png compositeicon_20.png compositeicon_16.png $final_dir/${f%%.*}.ico
+	magick compositeicon_256.png compositeicon_64.png compositeicon_48.png compositeicon_40.png compositeicon_32.png compositeicon_24.png compositeicon_20.png compositeicon_16.png $final_dir/${f%.*}.ico
 
 	# Clear screen
 	# clear

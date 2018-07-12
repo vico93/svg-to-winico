@@ -1,10 +1,9 @@
 #!/bin/bash
 cd "${0%/*}"
 
-# Folder where emojis are stored (git repository)
-# e.g.:<path to your Twemoji folder>\2\svg
-echo "Enter emoji dir path:"
-read emoji_dir
+# Start this bash with the twemoji svg folder as a argument
+# e.g.:make_twemojilibrary.sh <path to your Twemoji folder>\2\svg
+emoji_dir=$1
 
 # Folder where you extracted the standard Windows folder icon
 baseicons_dir=${0%/*}/src/folder

@@ -18,7 +18,7 @@ set final_dir=%~dp0\bin\folder
 
 mkdir %final_dir%
 
-for /f %%f in ('dir /b %emoji_dir%') do (
+for /f %%f in ('dir /b /O:N %emoji_dir%') do (
 	echo %%f
 	REM Pasta temporária
 	mkdir %temp_dir%\%%~nf

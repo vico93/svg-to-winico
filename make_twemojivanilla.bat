@@ -24,6 +24,7 @@ for /f %%f in ('dir /b /O:N %emoji_dir%') do (
 	
 	REM Processa svg do emoji
 	inkscape %emoji_dir%\%%f --export-png="emoji_256.png" -w256 -h256 --without-gui
+	inkscape %emoji_dir%\%%f --export-png="emoji_96.png" -w96 -h96 --without-gui
 	inkscape %emoji_dir%\%%f --export-png="emoji_64.png" -w64 -h64 --without-gui
 	inkscape %emoji_dir%\%%f --export-png="emoji_48.png" -w48 -h48 --without-gui
 	inkscape %emoji_dir%\%%f --export-png="emoji_40.png" -w40 -h40 --without-gui
@@ -33,7 +34,7 @@ for /f %%f in ('dir /b /O:N %emoji_dir%') do (
 	inkscape %emoji_dir%\%%f --export-png="emoji_16.png" -w16 -h16 --without-gui
 	
 	REM Make the .ico	
-	magick emoji_256.png emoji_64.png emoji_48.png emoji_40.png emoji_32.png emoji_24.png emoji_20.png emoji_16.png %final_dir%\%%~nf.ico
+	magick emoji_256.png emoji_96.png emoji_64.png emoji_48.png emoji_40.png emoji_32.png emoji_24.png emoji_20.png emoji_16.png %final_dir%\%%~nf.ico
 
 	REM Clear screen
 	cls

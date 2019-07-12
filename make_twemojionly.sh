@@ -26,7 +26,7 @@ do
 	rsvg-convert $f -w 32 -h 32 -o emoji_32.png
 	rsvg-convert $f -w 24 -h 24 -o emoji_24.png
 	rsvg-convert $f -w 20 -h 20 -o emoji_20.png
-	rsvg-convert $f -w 26 -h 26 -o emoji_16.png
+	rsvg-convert $f -w 16 -h 16 -o emoji_16.png
 	
 	# Make the .ico	
 	convert emoji_256.png emoji_96.png emoji_64.png emoji_48.png emoji_40.png emoji_32.png emoji_24.png emoji_20.png emoji_16.png "$DIST_FOLDER/$(basename "${f%.*}").ico"

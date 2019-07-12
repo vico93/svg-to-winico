@@ -32,4 +32,5 @@ do
 	convert emoji_256.png emoji_96.png emoji_64.png emoji_48.png emoji_40.png emoji_32.png emoji_24.png emoji_20.png emoji_16.png "$DIST_FOLDER/$(basename "${f%.*}").ico"
 	
 	cd ../../../
+	rm -rf $TMP_FOLDER/$(basename "${f%.*}")
 done

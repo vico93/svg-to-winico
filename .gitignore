@@ -31,4 +31,4 @@ $RECYCLE.BIN/
 # CUSTOM
 bat_old/
 dist/
-tmp_*/
+tmp*/

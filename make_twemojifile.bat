@@ -3,7 +3,7 @@ SETLOCAL EnableDelayedExpansion
 cd /D %~dp0
 
 REM Set PATH only if you arent added inkscape already
-SET PATH=%PATH%;C:\Program Files\Inkscape\
+SET PATH=%PATH%;C:\Program Files\Inkscape\bin\
 
 REM Folder where emojis are stored (git repository)
 REM e.g.:<path to your Twemoji folder>\2\svg

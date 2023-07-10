@@ -2,7 +2,7 @@
 SCRIPT_PATH=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
 cd $SCRIPT_PATH
 echo $SCRIPT_PATH
-read -p "Enter emoji dir path: " EMOJI_DIR
+read -p "Enter SVG folder path: " EMOJI_DIR
 
 SRC_FOLDER=$SCRIPT_PATH/src/file
 TMP_FOLDER=$SCRIPT_PATH/tmp/file

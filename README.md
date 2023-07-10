@@ -1,13 +1,9 @@
-# Windows 10-styled twemoji folder/library icons
-I created this couple of batches after became infuriated by a deviantart guy trying to sold them.
+# SVG to (Windows) ICO
+Basicamente converte todos os arquivos .svg de uma pasta para o formato nativo de ícone do Windows (incluindo sobreposições de pastas, bibliotecas e arquivos).
 
-You will need:
+Por preferencia minha, precisa ser executado no Linux (tanto nativo como WSL) com as seguintes ferramentas instaladas:
 - On Bash:
-  * librsvg;
-  * Imagemagick 6
-- On Windows:
-  * Inkscape (optionally on PATH; you can add it only for the .BATs - change the inkscape path on both BATs!);
-  * Imagemagick 7 (should be on your PATH);
-- [Twemoji](https://github.com/twitter/twemoji) repository cloned on your computer.
+- librsvg;
+- Imagemagick 6
 
-The base library icon is from [VCFerreira](https://www.deviantart.com/vcferreira/art/Windows-10-Library-Base-png-and-ico-536899477), and the folder icon bases are made by Microsoft (from imageres.dll).
+O ícone usado para a sobreposição de biblioteca foi criado pelo [VCFerreira](https://www.deviantart.com/vcferreira/art/Windows-10-Library-Base-png-and-ico-536899477), e o resto dos templates foi extraído dos arquivos do Windows.

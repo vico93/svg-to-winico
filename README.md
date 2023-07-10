@@ -2,7 +2,6 @@
 Basicamente converte todos os arquivos .svg de uma pasta para o formato nativo de ícone do Windows (incluindo sobreposições de pastas, bibliotecas e arquivos).
 
 Por preferencia minha, precisa ser executado no Linux (tanto nativo como WSL) com as seguintes ferramentas instaladas:
-- On Bash:
 - librsvg;
 - Imagemagick 6
 

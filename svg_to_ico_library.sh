@@ -28,16 +28,16 @@ do
 	rsvg-convert "$f" -w 14 -h 14 -o emoji_16.png
 	
 	# Composite the file icon
-	composite -gravity center -geometry +0+8 emoji_256.png "$SRC_FOLDER/256.png" compositeicon_256.png
-	composite -gravity center -geometry +0+0 emoji_64.png "$SRC_FOLDER/64.png" compositeicon_64.png
-	composite -gravity center -geometry +0+0 emoji_48.png "$SRC_FOLDER/48.png" compositeicon_48.png
-	composite -gravity center -geometry +0+0 emoji_32.png "$SRC_FOLDER/32.png" compositeicon_32.png
-	composite -gravity center -geometry +0+0 emoji_24.png "$SRC_FOLDER/24.png" compositeicon_24.png
-	composite -gravity center -geometry +0+0 emoji_20.png "$SRC_FOLDER/20.png" compositeicon_20.png
-	composite -gravity center -geometry +0+1 emoji_16.png "$SRC_FOLDER/16.png" compositeicon_16.png
+	magick composite -gravity center -geometry +0+8 emoji_256.png "$SRC_FOLDER/256.png" compositeicon_256.png
+	magick composite -gravity center -geometry +0+0 emoji_64.png "$SRC_FOLDER/64.png" compositeicon_64.png
+	magick composite -gravity center -geometry +0+0 emoji_48.png "$SRC_FOLDER/48.png" compositeicon_48.png
+	magick composite -gravity center -geometry +0+0 emoji_32.png "$SRC_FOLDER/32.png" compositeicon_32.png
+	magick composite -gravity center -geometry +0+0 emoji_24.png "$SRC_FOLDER/24.png" compositeicon_24.png
+	magick composite -gravity center -geometry +0+0 emoji_20.png "$SRC_FOLDER/20.png" compositeicon_20.png
+	magick composite -gravity center -geometry +0+1 emoji_16.png "$SRC_FOLDER/16.png" compositeicon_16.png
 	
 	# Make the .ico	
-	convert compositeicon_256.png compositeicon_64.png compositeicon_48.png compositeicon_32.png compositeicon_24.png compositeicon_20.png compositeicon_16.png "$DIST_FOLDER/$(basename "${f%.*}").ico"
+	magick convert compositeicon_256.png compositeicon_64.png compositeicon_48.png compositeicon_32.png compositeicon_24.png compositeicon_20.png compositeicon_16.png "$DIST_FOLDER/$(basename "${f%.*}").ico"
 	
 	cd ../../../
 	rm -rf "$TMP_FOLDER/$(basename "${f%.*}")"

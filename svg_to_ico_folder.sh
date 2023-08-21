@@ -28,16 +28,16 @@ do
 	rsvg-convert "$f" -w 10 -h 10 -o emoji_20.png
 	
 	# Composite the folder icon
-	composite -gravity SouthEast -geometry +16+29 emoji_256.png "$SRC_FOLDER/256.png" compositeicon_256.png
-	composite -gravity SouthEast -geometry +4+6 emoji_64.png "$SRC_FOLDER/64.png" compositeicon_64.png
-	composite -gravity SouthEast -geometry +3+6 emoji_48.png "$SRC_FOLDER/48.png" compositeicon_48.png
-	composite -gravity SouthEast -geometry +2+5 emoji_40.png "$SRC_FOLDER/40.png" compositeicon_40.png
-	composite -gravity SouthEast -geometry +3+3 emoji_32.png "$SRC_FOLDER/32.png" compositeicon_32.png
-	composite -gravity SouthEast -geometry +1+3 emoji_24.png "$SRC_FOLDER/24.png" compositeicon_24.png
-	composite -gravity SouthEast -geometry +2+2 emoji_20.png "$SRC_FOLDER/20.png" compositeicon_20.png
+	magick composite -gravity SouthEast -geometry +16+29 emoji_256.png "$SRC_FOLDER/256.png" compositeicon_256.png
+	magick composite -gravity SouthEast -geometry +4+6 emoji_64.png "$SRC_FOLDER/64.png" compositeicon_64.png
+	magick composite -gravity SouthEast -geometry +3+6 emoji_48.png "$SRC_FOLDER/48.png" compositeicon_48.png
+	magick composite -gravity SouthEast -geometry +2+5 emoji_40.png "$SRC_FOLDER/40.png" compositeicon_40.png
+	magick composite -gravity SouthEast -geometry +3+3 emoji_32.png "$SRC_FOLDER/32.png" compositeicon_32.png
+	magick composite -gravity SouthEast -geometry +1+3 emoji_24.png "$SRC_FOLDER/24.png" compositeicon_24.png
+	magick composite -gravity SouthEast -geometry +2+2 emoji_20.png "$SRC_FOLDER/20.png" compositeicon_20.png
 	
 	# Make the .ico	
-	convert compositeicon_256.png compositeicon_64.png compositeicon_48.png compositeicon_40.png compositeicon_32.png compositeicon_24.png compositeicon_20.png emoji_32.png "$DIST_FOLDER/$(basename "${f%.*}").ico"
+	magick convert compositeicon_256.png compositeicon_64.png compositeicon_48.png compositeicon_40.png compositeicon_32.png compositeicon_24.png compositeicon_20.png emoji_32.png "$DIST_FOLDER/$(basename "${f%.*}").ico"
 	
 	cd ../../../
 	rm -rf "$TMP_FOLDER/$(basename "${f%.*}")"

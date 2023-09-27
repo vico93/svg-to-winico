@@ -1,7 +1,6 @@
 #!/bin/bash
 SCRIPT_PATH=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
-cd $SCRIPT_PATH
-echo $SCRIPT_PATH
+pushd $SCRIPT_PATH
 read -p "Enter SVG folder path: " EMOJI_DIR
 
 SRC_FOLDER=$SCRIPT_PATH/src/folder
@@ -17,7 +16,7 @@ do
 	
 	# Take action on each file. $f store current file name
 	mkdir -p "$TMP_FOLDER/$(basename "${f%.*}")"
-	cd "$TMP_FOLDER/$(basename "${f%.*}")"
+	pushd "$TMP_FOLDER/$(basename "${f%.*}")"
 	
 	rsvg-convert "$f" -w 120 -h 120 -o emoji_256.png
 	rsvg-convert "$f" -w 32 -h 32 -o emoji_64.png
@@ -39,6 +38,9 @@ do
 	# Make the .ico	
 	magick convert compositeicon_256.png compositeicon_64.png compositeicon_48.png compositeicon_40.png compositeicon_32.png compositeicon_24.png compositeicon_20.png emoji_32.png "$DIST_FOLDER/$(basename "${f%.*}").ico"
 	
-	cd ../../../
+	popd
+ 
 	rm -rf "$TMP_FOLDER/$(basename "${f%.*}")"
 done
+
+popd
